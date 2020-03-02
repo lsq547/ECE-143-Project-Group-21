@@ -29,7 +29,7 @@ Dataset containing a variety of information about almost every computer game rel
 We will use statistical methods including machine learning to find the correlation between different factors and sales. In order to better understand the production of games, games themselves, and the behavior of those who play them, we will analyze various topics, including:
 
 * Correlation between average play time and user scores (Matheus, Yifan)
-* Comparison of free-to-play and paid video games (Yue)
+* Comparison of free-to-play and paid video games (Yue, Yifan)
 * Analysis of genre popularity over time (measured with play time, scores, and purchases) (Matheus, Yifan)
 * Comparison of different publishers, e.g. if choosing to publish certain genres over time affected success (Shiqi)
 * Comparison of user activity across both publishers and developers, e.g. understand if certain developers make games that are meant to be played a lot etc. (Shiqi)
