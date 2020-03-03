@@ -34,6 +34,6 @@ We will use statistical methods including machine learning to find the correlati
 * Comparison of different publishers, e.g. if choosing to publish certain genres over time affected success (Shiqi)
 * Comparison of user activity across both publishers and developers, e.g. understand if certain developers make games that are meant to be played a lot etc. (Shiqi)
 * Relationship between price and game popularity (Yue)
-* Relationship between system requirements and game popularity
+* Relationship between system requirements and game popularity (Yue)
 
 ~~Further, we can try to predict the selling data and user rating based on genre, publisher, release date, etc.~~
