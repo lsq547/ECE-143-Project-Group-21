@@ -67,3 +67,29 @@ def data_process():
     df['GPU'] = df['recommended_spec'].apply(parse_spec)
 
     return df
+
+def split_by(df, col, by, index = 'release_year'):
+    """
+    split the one column of DataFrame into multiple columns.
+    :df: the DataFrame
+    :col: the target column
+    :by: split by
+    :index: the index after split
+    :return: DataFrame
+    """
+    res = pd.DataFrame(df[col].str.split(by).tolist(), df[index]).stack().reset_index()[[0, index]]
+    res.columns = [col, index]
+    return res
+
+def top_ratio(col, topK = 10):
+    """
+    calculate topK ratio of the column.
+    :col: the column
+    :topK: select top K
+    return: dict of ratios and name
+    """
+    value_counts = col.value_counts()
+    top = value_counts.head(topK).index.tolist()
+    total = col.count();
+    ratios = [value_counts[genre] / total for genre in top]
+    return dict(zip(top, ratios))
