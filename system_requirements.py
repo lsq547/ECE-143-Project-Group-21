@@ -42,8 +42,8 @@ def GPU_relation(df):
         color_list.append(colors[color_index])
 
     plt.figure(figsize=(10, 7))
-    ax = plt.bar(grouped_info['GPU Info'], grouped_info['owners'], color=color_list)
-    plt.xticks(rotation='vertical', fontsize=14)
+    ax = plt.barh(grouped_info['GPU Info'], grouped_info['owners'], color=color_list)
+    plt.xticks(fontsize=14)
     plt.yticks(fontsize=14)
     plt.xlabel('Recommended Graphics Card (NVIDIA GTX)', fontsize=20)
     plt.ylabel('Owners', fontsize=20)
