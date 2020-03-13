@@ -2,6 +2,10 @@ import matplotlib.pyplot as plt
 import re
 
 def GPU_relation(df):
+    '''
+    plot system requirements data
+    :df: cleaned dataframe
+    '''
     gpuinfo = df[['owners', 'GPU']][df['GPU'] != '']
     gpu_sn = {'': (0, 0)}
 
@@ -41,15 +45,12 @@ def GPU_relation(df):
             color_index = 0
         color_list.append(colors[color_index])
 
-    plt.figure(figsize=(10, 7))
+    plt.figure(figsize=(8, 5.5))
     ax = plt.barh(grouped_info['GPU Info'], grouped_info['owners'], color=color_list)
-    plt.xticks(fontsize=14)
-    plt.yticks(fontsize=14)
-    plt.xlabel('Recommended Graphics Card (NVIDIA GTX)', fontsize=20)
-    plt.ylabel('Owners', fontsize=20)
-    plt.title('Graphics Card Requirements vs Owners', fontsize=26)
-    lg = plt.legend(handles=[ax[1:8], ax[9:17], ax[17:23], ax[24:30]], labels=['Low', 'Medium', 'High', 'Very High'], title='Tier', fontsize=14,
-                    fancybox=True, shadow=True)
-    lg.get_title().set_fontsize(16)
+    plt.ylabel('Recommended Graphics Card (NVIDIA GTX)')
+    plt.xlabel('Owners')
+    plt.title('Graphics Card Requirements vs Owners')
+    lg = plt.legend(handles=[ax[1:8], ax[9:17], ax[17:23], ax[24:30]], labels=['Low', 'Medium', 'High', 'Very High'], title='Tier')
+    lg.get_title()
     plt.tight_layout()
     plt.show()
