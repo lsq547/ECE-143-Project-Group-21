@@ -43,10 +43,11 @@ We will use statistical methods including machine learning to find the correlati
 |   ├── steam_requirements_data.csv
 |   └── steamspy_data.csv
 |   └── steamspy_tag_data.csv
-├── data_processing.py
-├── developer_and_publisher.py
-├── system_requirements.py
-├── tag_analysis.py
+├── src
+|   ├── data_processing.py
+|   ├── developer_and_publisher.py
+|   ├── system_requirements.py
+|   ├── tag_analysis.py
 ├── Final Project.ipynb
 ├── Steam Analysis Group 21 Presentation Slides.pdf
 ├── README.md
