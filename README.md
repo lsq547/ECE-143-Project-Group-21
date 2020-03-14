@@ -1,6 +1,6 @@
 # ECE-143-Project-Group-21
 
-Analysis of Steam Games’ Success
+Analysis of Steam Games
 
 ## Group members
 
@@ -15,14 +15,14 @@ Yifan Cao: y8cao@ucsd.edu
 ## Problem
 
 In 2017, Steam, the most popular platform for purchasing and playing computer games, generated over 4.5 Billion USD in revenue. In order to better understand the many factors that drive the changes in this industry, it is necessary to take a closer look at three key factors:
-The producers and distributors of computer games
-The games themselves
-Those who purchase and play the games
+* The developers and publishers of Steam games
+* Distribution of system requirement for Steam users
+* Trend of genres and tags of Steam games
 
 ## Dataset
 
-Steam Store Games Dataset: https://www.kaggle.com/nikdavis/steam-store-games
-Dataset containing a variety of information about almost every computer game released on popular gaming platform Steam. This includes information such as review scores, average user play time, genres, tags indicating style of games, and number of people who own the title.
+Steam Games Dataset: https://www.kaggle.com/nikdavis/steam-store-games
+Datasets contain a variety of information about almost every computer games released before May 2019 on popular gaming platform Steam and a third party Steam database website SteamSpy. Datasets include information such as user reviews, average play time, developers, genres, tags indicating style of games, and number of people who own the title.
 
 ## Proposed Solution and Real-world Application
 
@@ -36,4 +36,32 @@ We will use statistical methods including machine learning to find the correlati
 * Relationship between price and game popularity (Yue)
 * Relationship between system requirements and game popularity (Yue)
 
-~~Further, we can try to predict the selling data and user rating based on genre, publisher, release date, etc.~~
+## File Structure
+```
+├── datasets
+|   ├── steam.csv
+|   ├── steam_requirements_data.csv
+|   └── steamspy_data.csv
+|   └── steamspy_tag_data.csv
+├── data_processing.py
+├── developer_and_publisher.py
+├── system_requirements.py
+├── tag_analysis.py
+├── Final Project.ipynb
+├── Steam Analysis Group 21 Presentation Slides.pdf
+├── README.md
+```
+
+## Required Packages
+* regex
+* DateTime
+* scipy
+* pandas
+* numpy
+* matplotlib
+* seaborn
+
+To install these packages, use command:
+```
+pip install [packagename]
+```
